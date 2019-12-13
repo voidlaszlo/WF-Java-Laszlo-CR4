@@ -87,6 +87,9 @@ public class Main extends Application {
 
         HBox main = new HBox(productControls, list);
 
+        productControls.setSpacing(5);
+        description.setWrapText(true);
+
         GridPane grid = new GridPane();
         ColumnConstraints col1 = new ColumnConstraints();
         col1.setPercentWidth(50);
@@ -139,6 +142,8 @@ public class Main extends Application {
         });
 
         Scene scene = new Scene(grid, 1280, 720);
+        System.out.println(scene.getStylesheets());
+        scene.getStylesheets().add("sample/styles.css");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
